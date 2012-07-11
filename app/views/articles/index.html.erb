@@ -1,0 +1,14 @@
+<html>
+<head><title>Articles</title>
+</head>
+<body>
+	<ul>
+		<%@article.each do |article|%>
+		<li>
+			<%=link_to article.title, article_path(article), 
+					:class => "article_title", :id=> "article_#{article.id}"%>
+		</li>
+		<%end%>
+	</ul>
+</body>
+</html>
